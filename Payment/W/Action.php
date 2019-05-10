@@ -117,7 +117,7 @@ class Action extends \Df\Payment\Action {
 				$this->_view->getLayout()->getBlock('page.main.title')
 					->setPageTitle(__('Transaction failed!!! You have not enough balance. '));
 				$this->_view->renderLayout();
-			} 
+			}
 			else{
 				return $r;
 			}
