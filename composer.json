@@ -1,5 +1,5 @@
 {
-	"name": "mage2pro/core"
+	"name": "maqandarashvli/core"
 	,"version": "4.3.9"
 	,"description": "Mage2.PRO core package."
 	,"type": "magento2-module"
@@ -15,6 +15,12 @@
 		"magento/framework": ">=100.0.0"
 		,"magento/module-sample-data": ">=100.0.0"
 		,"phpunit/phpunit": "*"
-	}
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/maqandarashvili/core"
+		}
+	]
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Df\\": ""}}
 }
