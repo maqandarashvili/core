@@ -111,7 +111,20 @@ class Action extends \Df\Payment\Action {
 				df_error('Invalid result class: %s.', get_class($r));
 			}
 		}
-		return $r;
+		if(!is_null($r)){
+			if(strpos($r->__toString(), 'TBCBank') !== false && strpos($r->__toString(), 'failed') !== false){
+				$this->_view->loadLayout();
+				$this->_view->getLayout()->getBlock('page.main.title')
+					->setPageTitle(__('Transaction failed!!! You have not enough balance. '));
+				$this->_view->renderLayout();
+			}
+			else{
+				return $r;
+			}
+		}
+		else{
+			return $r;
+		}
 	}
 
 	/**
