@@ -15,12 +15,6 @@
 		"magento/framework": ">=100.0.0"
 		,"magento/module-sample-data": ">=100.0.0"
 		,"phpunit/phpunit": "*"
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/maqandarashvili/core"
-		}
-	]
+	}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Df\\": ""}}
 }
